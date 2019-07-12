@@ -1,0 +1,14 @@
+image: Visual Studio 2019
+  
+before_build:
+- cmd: nuget restore
+
+install:
+  appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
+
+after_build:
+  - 7z a winforms-datavisualization.zip "%APPVEYOR_BUILD_FOLDER%\winforms-datavisualization\bin\Debug\*.*"
+
+artifacts:  # Archive the generated packages in the ci.appveyor.com build report.  - path: bin\Debug\*
+  - path: winforms-datavisualization.zip
+    name: artifacts-all
