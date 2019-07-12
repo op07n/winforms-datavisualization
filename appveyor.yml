@@ -7,7 +7,7 @@ install:
   appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
 
 build:
-  project: C:\projects\winforms-datavisualization\src\System.Windows.Forms.DataVisualization\ChartWin.csproj    # path to Visual Studio solution or project
+  project: C:\projects\winforms-datavisualization\src\System.Windows.Forms.DataVisualization\ChartWin.sln    # path to Visual Studio solution or project
   parallel: false                                       # enable MSBuild parallel builds
   verbosity: normal                                     # MSBuild verbosity level (quiet|minimal|normal|detailed)
 
